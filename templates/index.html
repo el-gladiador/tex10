@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Goals Overview</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>TEX10 Company Goals</h1>
+
+    <!-- Toggle Button for switching views -->
+    <button id="toggle-graph-button">Show Graph View</button>
+
+    <!-- Goals Overview Section (initially visible) -->
+    <section id="goals-overview">
+        <h2>Overview of Goals</h2>
+        <button id="add-goal-button">Add New Goal</button>
+        <table id="goals-table">
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Goal Statement</th>
+                    <th>Criteria</th>
+                    <th>Rating</th>
+                    <th>Assessment</th>
+                    <th>Last Changed</th>
+                    <th>Changed By</th>
+                    <th>Comments</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="goals-list"></tbody>
+        </table>
+    </section>
+
+    <!-- Goal History Section (initially hidden) -->
+    <section id="goal-history" style="display:none;">
+        <h2>Goal History</h2>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                    <th>Changed By</th>
+                </tr>
+            </thead>
+            <tbody id="history-list"></tbody>
+        </table>
+        <button id="back-to-overview">Back to Overview</button>
+    </section>
+
+    <!-- Graphical Analysis Section (initially hidden) -->
+    <section id="graph-analysis" style="display:none;">
+        <h2>Score Development</h2>
+        <canvas id="score-chart" width="400" height="200"></canvas>
+    </section>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
